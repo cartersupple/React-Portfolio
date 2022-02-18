@@ -1,24 +1,17 @@
-import React from "react";
-import Navigation from "../Nav";
-
+import React from 'react';
+import Nav from "../Nav";
 function Header(props) {
-    const {
-        menuEntries=[],
-        setCurrentMenuEntry,
-        currentMenuEntry
-    } = props;
-
-    return (
-        <header>
-           <h1>Carter Supple</h1>
-            <Nav
-                menuEntries={menuEntries}
-                setCurrentMenuEntry={setCurrentMenuEntry}
-                currentMenuEntry={currentMenuEntry}
-            >
-            </Nav>
-        </header>
-    )
+  const { currentCategory, setCurrentCategory } = props;
+  
+  return (
+    <header className='flex-row px-2' id='navbar'>
+      <div className='nav'>
+      <Nav
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        ></Nav>
+      </div>
+    </header>
+  );
 }
-
 export default Header;

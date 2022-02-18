@@ -1,45 +1,46 @@
-import React, { useState } from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import Gallery from './components/Header';
-import ContactForm from './components/Contact';
+import React, { useState } from "react";
+import './App.css';
+import About from "./components/About";
+import Header from "./components/Header";
+import Portfolio from "./components/Portfolio";
+import ContactForm from "./components/Contact";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 function App() {
-  const [categories] = useState([
-    {
-      name: 'commercial',
-      description: 'Photos of grocery stores, food trucks, and other commercial projects',
-    },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
-  ]);
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  const [contactSelected, setContactSelected] = useState(false);
-
-  return (
-    <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
-      <main>
-        {!contactSelected ? (
-          <>
-            <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
-      </main>
-    </div>
-  );
-}
-
-export default App;
+    const [currentCategory, setCurrentCategory] = useState("about");
+  
+    const sectionSelection = () => {
+      switch (currentCategory) {
+        case "about":
+          return <About />;
+        case "portfolio":
+          return <Portfolio />;
+        case "contact":
+          return <ContactForm />;
+          case "resume":
+          return <Resume />;
+        default:
+          return null;
+      }
+    };
+  
+    return (
+      <div>
+        <div>
+          <Header
+            currentCategory={currentCategory}
+            setCurrentCategory={setCurrentCategory}
+          ></Header>
+        </div>
+        <div>
+          <div>{sectionSelection()}</div>
+        </div>
+        <div>
+          <Footer></Footer>
+        </div>
+      </div>
+    );
+  }
+  
+  export default App;
