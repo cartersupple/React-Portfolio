@@ -2,62 +2,44 @@ import React from "react";
 import Projects from "../Projects";
 function Portfolio() {
   const projects = [
-    {
-      title: "E-commerce backend",
-      image: "e-commerce-backend.gif",
-      repository: "https://github.com/cartersupple/e-commerce-backend",
-      description: "",
-      deployment: ""
-    },
+  
     {
       title: "Note-Taker",
       image: "notetaker.gif",
       repository: "https://github.com/cartersupple/Note-Taker",
-      description: "",
-      deployment: ""
+      description: "An easy way to store your thoughts.",
+      deployment: "https://carter-note-taker.herokuapp.com/"
     },  
     {
       title: "King-OTH",
       image: "koth.gif",
       repository: "https://github.com/cartersupple/King-OTH",
-      description: "",
-      deployment: ""
-    },   {
-      title: "Team Profile Generator",
-      image: "teamprofilegen.gif",
-      repository: "https://github.com/cartersupple/Team-Profile-Generator-",
-      description: "",
-      deployment: ""
-    },   {
-      title: "Read.me Generator",
-      image: "readmegen.gif",
-      repository: "https://github.com/cartersupple/read.me-generator",
-      description: "",
-      deployment: ""
+      description: "A social NFT rating platform similar to Tinder. User interaction generates public sentiment information.",
+      deployment: "https://nc-king-of-the-hill.herokuapp.com/"
     },   {
       title: "Weather Dashboard",
       image: "weatherdash.png",
       repository: "https://github.com/cartersupple/Weather-Dashboard",
-      description: "",
-      deployment: ""
+      description: "Check the weather near you. Or far away.",
+      deployment: "https://cartersupple.github.io/Weather-Dashboard/"
     },   {
       title: "On The Go",
       image: "onthego.png",
       repository: "https://github.com/cartersupple/on-the-go",
-      description: "",
-      deployment: ""
+      description: "A bathroom finder app for uber drivers made by an uber driver.",
+      deployment: "https://cartersupple.github.io/on-the-go/"
     },   {
       title: "Work Day Scheduler",
       image: "workdaysch.png",
       repository: "https://github.com/cartersupple/Work-Day-Scheduler",
-      description: "",
-      deployment: ""
+      description: "Plan your day with a hourly scheduler.",
+      deployment: "https://cartersupple.github.io/Work-Day-Scheduler/"
     },   {
       title: "Code Quiz",
       image: "codequiz.png",
       repository: "https://github.com/cartersupple/Challenge-Code-Quiz",
-      description: "",
-      deployment: ""
+      description: "A flashcard style memorization game to learn coding terms.",
+      deployment: "https://cartersupple.github.io/Challenge-Code-Quiz/"
     },  
   ];
   return (
